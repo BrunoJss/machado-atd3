@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zurc Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="cabec">
+        <div class="logo">
+            <h1>Zurc Store</h1>
+         </div>
+         <div class="bott">
+             <nav>
+                 <ul>
+                    <a href="index.html"><li><STRONG>HOME</STRONG></li></a>
+                    <a href="masc.html"><li><STRONG>MASCULINO</STRONG></li></a>
+                    <a href="fem.html"><li><STRONG>FEMININO</STRONG></li></a>
+                    <a href="contato.html"><li><STRONG>CONTATO</STRONG></li></a>
+                    <a href="sobre.html"><li><STRONG>SOBRE</STRONG></li></a>
+                 </ul>
+             </nav>
+             
+         </div>
+ </header>
+    <hr>
+
+    <main>
+        <h2>Entre em contato conosco:</h2>
+        <div class="area">
+            <form class="form">
+                <div class="lab">
+                    <label for="nome">Nome: </label>
+                    <input type="text">
+                </div>
+        
+                <div class="lab">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="idemail">
+                </div>
+                <div class="lab">
+                    <label>Mensagem</label>
+                    <textarea style="resize: none;" rows="7" placeholder="Digite sua mensagem..."></textarea>
+                </div>
+                <div  class="lab">
+                    <button class="custButton" type="submit" onclick="alerta()">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <hr>
+    <footer>
+        <p class="p-footer">Feito por Bruno de Jesus </p>
+        <img class="img-footer" src="img/icone-github.png" alt="" >
+        <img class="img-footer" src="img/icone-instagram.png" alt="">
+        <img class="img-footer" src="img/icone-linkedin.png" alt="" >
+    </footer>
+
+    <script>
+        function alerta() {
+            alert("Mensagem enviada com sucesso!");
+        }
+    </script>
+    
+</body>
+
+</html>
