@@ -160,7 +160,10 @@ img:hover {
     cursor: pointer;
 }
 
-
+#bott-mobile {
+   
+    display: none;
+}
 
 
 @media(max-width: 775px) {
@@ -213,12 +216,6 @@ img:hover {
     li>a {
         text-align: center;
     }
-
-}
-
-
-@media (max-width: 530px) {
-    
     .bott {
         display: none;
     }
@@ -231,7 +228,12 @@ img:hover {
     .search-box-input {
         width: 35vw;
     }
-   
+}
+
+@media (width >= 605px) {
+    #bott-mobile {
+        display: none !important; 
+    }
 }
 
 h2 {

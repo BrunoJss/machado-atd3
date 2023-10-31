@@ -1,10 +1,11 @@
 const btn = document.querySelector('#menu-sanduba');
-const menu = document.querySelector('.bott-mobile');
+const menuMobile = document.querySelector('.bott-mobile');
+const menuDesktop = document.querySelector('.bott')
 
 btn.addEventListener('click', function() {
-    if(menu.style.display === 'flex'){
-        menu.style.display = 'none';
+    if(menuMobile.style.display === 'flex'){
+        menuMobile.style.display = 'none';
     } else {
-        menu.style.display = 'flex';
+        menuMobile.style.display = 'flex';
     }
 });
