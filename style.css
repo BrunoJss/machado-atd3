@@ -70,12 +70,19 @@ header {
 }
 
 
-.bott {
+.bott, .bott-mobile{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     background-color: #a3c4c2;
+}
+
+
+
+.bott-mobile > nav > ul {
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
@@ -212,13 +219,6 @@ img:hover {
 
 @media (max-width: 530px) {
     
-    /*.cabec {
-        flex-wrap: wrap;
-    }
-    .search-box {
-        order: 2;
-    }*/
-
     .bott {
         display: none;
     }
