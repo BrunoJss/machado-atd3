@@ -11,15 +11,16 @@ footer => fixo no final da viewport
 */
 
 * {
-    
+
     margin: 0px;
 }
 
 body {
-    background-color: #f0dfc0;
+    background: rgb(100,130,133);
+background: linear-gradient(0deg, rgba(100,130,133,1) 9%, rgba(163,196,194,1) 31%, rgba(226,236,236,1) 50%, rgba(180,166,142,1) 70%, rgba(243,218,170,1) 93%); 
     font-family: 'Raleway', sans-serif;
     color: #080d0d;
-    
+    background-repeat: no-repeat;
 }
 
 .texto-principal {
@@ -27,7 +28,7 @@ body {
 }
 
 .texto-principal>p {
-    text-align: left;
+    text-align: justify;
     margin: 0px;
     padding: 5px;
     text-indent: 4em;
@@ -36,20 +37,23 @@ body {
 header {
     display: inline-block;
     background-color: #b4a68e;
-    width: 100%
+    width: 100%;
+    -webkit-box-shadow: 0px 11px 15px -3px rgba(0,0,0,0.68); 
+box-shadow: 0px 11px 15px -3px rgba(0,0,0,0.68);
 }
 
 .cabec {
     display: flex;
     height: 120px;
     width: 100%;
+
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
+    margin-right: 0.3rem;
 }
 
 
@@ -70,7 +74,8 @@ header {
 }
 
 
-.bott, .bott-mobile{
+.bott,
+.bott-mobile {
     display: flex;
     width: 100%;
     align-items: center;
@@ -80,7 +85,7 @@ header {
 
 
 
-.bott-mobile > nav > ul {
+.bott-mobile>nav>ul {
     display: flex;
     flex-direction: column;
 }
@@ -111,7 +116,7 @@ nav li {
 nav li,
 a:link {
     text-decoration: none;
-    
+
 }
 
 .search-box,
@@ -129,7 +134,8 @@ a:link {
     display: flex;
     align-items: center;
     justify-content: end;
-   position: relative; left: -10px;
+    position: relative;
+    left: -10px;
 }
 
 .imgNav img {
@@ -154,20 +160,41 @@ a:link {
     margin: 5px;
 }
 
-img:hover {
-    -webkit-filter: drop-shadow(0px 0px 5px #facb75);
-    filter: drop-shadow(0px 0px 5px #f3c46d);
+.imagem-item:hover, .logo:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px #648285);
+    filter: drop-shadow(0px 0px 5px #648285);
     cursor: pointer;
 }
 
+/*img:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px #648285);
+    filter: drop-shadow(0px 0px 5px #648285);
+    cursor: pointer;
+}*/
+
 #bott-mobile {
-   
     display: none;
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url(background/vecteezy_luxury-floral-golden-line-art-wallpaper-elegant-blooming_17039460.jpg);
+    background-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+.banner > img {
+    max-height: 100%;    
+}
+
+
+
 
 @media(max-width: 775px) {
-  
+
     .desktop-logo {
         display: none;
     }
@@ -183,9 +210,9 @@ img:hover {
         height: 30px;
         align-items: center;
         justify-content: center;
-        
+
     }
-    
+
     a {
         width: 100%;
         font-size: 12px;
@@ -213,26 +240,48 @@ img:hover {
         display: flex;
     }
 
-    li>a {
-        text-align: center;
-    }
     .bott {
         display: none;
+    }
+
+    a>li {
+        text-align: center;
+        width: 95%;
+        margin: 0.1rem;
+        padding: 5px;
+        align-items: center;
+
     }
 
     .texto-principal {
         width: 100%;
     }
 
-    
+
     .search-box-input {
         width: 35vw;
     }
+
+    nav {
+        display: flex;
+        width: 100%;
+    }
+
+    nav>ul {
+
+        padding: 0px;
+        width: 100%;
+    }
+
+    ul>a {
+        display: flex;
+        justify-content: center;
+    }
 }
 
-@media (width >= 605px) {
+@media (width >=605px) {
     #bott-mobile {
-        display: none !important; 
+        display: none !important;
     }
 }
 
@@ -289,6 +338,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 50px;
     background-color: #b4a68e;
@@ -304,6 +354,9 @@ footer {
 
 .img-footer {
     padding: 0px 5px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .p-footer {
