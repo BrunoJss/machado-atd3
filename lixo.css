@@ -18,7 +18,8 @@ footer => fixo no final da viewport
 
 body {
     height: 100%;
-    background: linear-gradient(0deg, #648285 9%, #a3c4c2 31%, #e2ecec 50%, #b4a68e 70%, #f3daaa 93%);
+    background: rgb(100,130,133);
+background: linear-gradient(0deg, #648285 9%, #a3c4c2 31%, #e2ecec 50%, #b4a68e 70%, #f3daaa 93%); 
     font-family: 'Raleway', sans-serif;
     color: #080d0d;
     background-repeat: no-repeat;
@@ -100,7 +101,7 @@ nav li {
     display: inline-block;
     text-align: center;
     margin: 10px;
-    width: 115px;
+    width: 100px;
     background-color: #f6fafa;
     padding: 7px;
     color: #080d0d;
@@ -160,8 +161,7 @@ a:link {
     margin: 5px;
 }
 
-.imagem-item:hover,
-.logo:hover {
+.imagem-item:hover, .logo:hover {
     filter: drop-shadow(0px 0px 5px #648285);
     cursor: pointer;
 }
@@ -180,41 +180,9 @@ a:link {
     height: 400px;
 }
 
-.banner>img {
-    max-height: 100%;
+.banner > img {
+    max-height: 100%;    
 }
-
-.banner-promo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(background/vecteezy_papercut-style-sea-wave-pattern-design-background_7535043.jpg);
-    background-position: 0% 50%;
-    width: 100%;
-    height: 300px;
-}
-
-.promo-tex {
-    font-size: 3rem;
-}
-
-.faixa-facilidades {
-background-color: #a3c4c2;
-height: 30px;
-display: flex;
-align-items: center;
-justify-content: space-around;
-}
-
-.facilidade-itens {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.facilidade-itens > img {
-    margin-right: 0.4rem;
-} 
 
 @media(max-width: 775px) {
 
@@ -241,50 +209,6 @@ justify-content: space-around;
         font-size: 12px;
         text-align: center;
     }
-
-    .contato {
-        flex-direction: column-reverse;
-    }
-
-    .faixa-facilidades {
-        position: relative;
-        width: 100%;
-        height: 50px; /* ajuste a altura conforme necessário */
-        overflow: hidden;
-    }
-
-    .facilidade-itens {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #a3c4c2;
-        opacity: 0;
-        animation: slideRight 12s linear infinite;
-    }
-
-    .facilidade-itens:nth-child(1) { animation-delay: 0s; }
-    .facilidade-itens:nth-child(2) { animation-delay: 3s; }
-    .facilidade-itens:nth-child(3) { animation-delay: 6s; }
-    .facilidade-itens:nth-child(4) { animation-delay: 9s; }
-
-    @keyframes slideRight {
-        0% {
-            transform: translateX(-100%);
-            opacity: 1;
-        }
-        25% {
-            transform: translateX(0%);
-            opacity: 1;
-        }
-        75% {
-            transform: translateX(0%);
-            opacity: 1;
-        }
-        100% {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-    }
 }
 
 @media(max-width: 605px) {
@@ -302,20 +226,12 @@ justify-content: space-around;
         display: flex;
     }
 
-    .corpo-news {
-        flex-direction: column;
-    }
-
     .responseMenu img {
         display: flex;
     }
 
     .bott {
         display: none;
-    }
-
-    video {
-        width: 300px;
     }
 
     a>li {
@@ -351,12 +267,10 @@ justify-content: space-around;
         display: flex;
         justify-content: center;
     }
-
-    .banner>img {
+    .banner > img {
         max-width: 100%;
         height: auto;
-        width: auto\9;
-        /* Adiciona suporte ao IE9 */
+        width: auto\9; /* Adiciona suporte ao IE9 */
     }
 }
 
@@ -432,8 +346,7 @@ footer {
 
 .img-footer {
     padding: 0px 5px;
-
-    &:hover {
+    &:hover{
         cursor: pointer;
     }
 }
@@ -452,12 +365,6 @@ form textarea {
     background-color: #f3f3e6;
 }
 
-.area {
-    padding: 7px;
-    background-color: #f3f3e6a2;
-    margin-bottom: 10px;
-}
-
 .corpo {
     display: flex;
     flex-direction: column;
@@ -470,15 +377,14 @@ form textarea {
     flex-wrap: wrap;
 }
 
-.div-imagens,
-.div-imagens-atb {
+.div-imagens, .div-imagens-atb {
     display: flex;
     flex-direction: column;
     margin: 20px;
 
 }
 
-.div-imagens-atb>h3 {
+.div-imagens-atb > h3 {
     font-size: 0.8rem;
 }
 
@@ -487,53 +393,6 @@ form textarea {
 }
 
 .imagem-item-atb {
-    width: 220px;
-    height: 320px;
+   width: 220px;
+   height: 320px;
 }
-
-.contato {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    justify-content: space-between;
-}
-
-.icone-contato>img {
-    max-width: 45px;
-    max-height: 45px;
-    width: auto;
-    height: auto;
-    margin: 1rem;
-    color: #b4a68e;
-}
-
-
-.main-contato {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.corpo-news {
-    display: inline-flex;
-}
-
-.texto-news {
-    margin-left: 25px;
-    text-align: justify;
-    text-indent: 0.5cm;
-    margin: 5px;
-}
-
-.midia-news {
-    display: flex;
-    justify-content: center;
-}
-
-video {
-    margin: 10px;
-}
-
-
-/* É TESTE BOY*/
-
