@@ -16,8 +16,9 @@ footer => fixo no final da viewport
 }
 
 body {
+    height: 100%;
     background: rgb(100,130,133);
-background: linear-gradient(0deg, rgba(100,130,133,1) 9%, rgba(163,196,194,1) 31%, rgba(226,236,236,1) 50%, rgba(180,166,142,1) 70%, rgba(243,218,170,1) 93%); 
+background: linear-gradient(0deg, #648285 9%, #a3c4c2 31%, #e2ecec 50%, #b4a68e 70%, #f3daaa 93%); 
     font-family: 'Raleway', sans-serif;
     color: #080d0d;
     background-repeat: no-repeat;
@@ -30,7 +31,7 @@ background: linear-gradient(0deg, rgba(100,130,133,1) 9%, rgba(163,196,194,1) 31
 .texto-principal>p {
     text-align: justify;
     margin: 0px;
-    padding: 5px;
+    padding: 10px;
     text-indent: 4em;
 }
 
@@ -166,12 +167,6 @@ a:link {
     cursor: pointer;
 }
 
-/*img:hover {
-    -webkit-filter: drop-shadow(0px 0px 5px #648285);
-    filter: drop-shadow(0px 0px 5px #648285);
-    cursor: pointer;
-}*/
-
 #bott-mobile {
     display: none;
 }
@@ -189,9 +184,6 @@ a:link {
 .banner > img {
     max-height: 100%;    
 }
-
-
-
 
 @media(max-width: 775px) {
 
@@ -219,7 +211,6 @@ a:link {
         text-align: center;
     }
 }
-
 
 @media(max-width: 605px) {
     .desktop {
@@ -298,14 +289,11 @@ hr {
     background-image: linear-gradient(to right, #ccc, #333333, #ccc);
 }
 
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .lab {
@@ -385,14 +373,22 @@ form textarea {
     flex-wrap: wrap;
 }
 
-.div-imagens {
+.div-imagens, .div-imagens-atb {
     display: flex;
     flex-direction: column;
     margin: 20px;
 
 }
 
+.div-imagens-atb > h3 {
+    font-size: 0.8rem;
+}
 
 .imagem-item {
     max-width: 260px;
+}
+
+.imagem-item-atb {
+   width: 220px;
+   height: 320px;
 }

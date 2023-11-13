@@ -1,0 +1,398 @@
+/*
+.color1 { #648285 };
+.color2 { #b4a68e };
+.color3 { #080d0d };
+.color4 { #f3daaa };
+.color5 { #a3c4c2 };
+
+menu => position sticky (-webkit-sticky p safari)
+footer => fixo no final da viewport
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background: rgb(100,130,133);
+background: linear-gradient(0deg, #648285 9%, #a3c4c2 31%, #e2ecec 50%, #b4a68e 70%, #f3daaa 93%); 
+    font-family: 'Raleway', sans-serif;
+    color: #080d0d;
+    background-repeat: no-repeat;
+}
+
+.texto-principal {
+    width: 50%;
+}
+
+.texto-principal>p {
+    text-align: justify;
+    margin: 0px;
+    padding: 10px;
+    text-indent: 4em;
+}
+
+header {
+    display: inline-block;
+    background-color: #b4a68e;
+    width: 100%;
+    box-shadow: 0px 11px 15px -3px rgba(0, 0, 0, 0.68);
+}
+
+.cabec {
+    display: flex;
+    height: 120px;
+    width: 100%;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.3rem;
+}
+
+
+.desktop-logo {
+    display: flex;
+}
+
+.tablet-logo {
+    display: none;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.search-box {
+    display: flex;
+}
+
+
+.bott,
+.bott-mobile {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #a3c4c2;
+}
+
+
+
+.bott-mobile>nav>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+    background-color: #f6fafa;
+    padding: 7px;
+    color: #080d0d;
+
+
+    &:hover {
+        background-color: #6e7777;
+        text-decoration: none;
+        color: #fffafa;
+    }
+}
+
+nav li,
+a:link {
+    text-decoration: none;
+
+}
+
+.search-box,
+.search-box-input {
+    display: flex;
+    width: 100%;
+}
+
+.search-box-input {
+    border-radius: 8px;
+    width: 35vw;
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    left: -10px;
+}
+
+.imgNav img {
+    max-width: 35px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+}
+
+.responseMenu img {
+    display: none;
+    max-width: 35px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+}
+
+.imgNav,
+.responseMenu {
+
+    justify-content: center;
+    margin: 5px;
+}
+
+.imagem-item:hover, .logo:hover {
+    filter: drop-shadow(0px 0px 5px #648285);
+    cursor: pointer;
+}
+
+#bott-mobile {
+    display: none;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url(background/vecteezy_luxury-floral-golden-line-art-wallpaper-elegant-blooming_17039460.jpg);
+    background-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+.banner > img {
+    max-height: 100%;    
+}
+
+@media(max-width: 775px) {
+
+    .desktop-logo {
+        display: none;
+    }
+
+    .tablet-logo {
+        display: flex;
+    }
+
+    nav li {
+        display: flex;
+        padding: 0px;
+        width: 80px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    a {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 605px) {
+    .desktop {
+        display: flex;
+        flex-grow: 2;
+        justify-items: end;
+    }
+
+    .tablet-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: flex;
+    }
+
+    .responseMenu img {
+        display: flex;
+    }
+
+    .bott {
+        display: none;
+    }
+
+    a>li {
+        text-align: center;
+        width: 95%;
+        margin: 0.1rem;
+        padding: 5px;
+        align-items: center;
+
+    }
+
+    .texto-principal {
+        width: 100%;
+    }
+
+
+    .search-box-input {
+        width: 35vw;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+    }
+
+    nav>ul {
+
+        padding: 0px;
+        width: 100%;
+    }
+
+    ul>a {
+        display: flex;
+        justify-content: center;
+    }
+    .banner > img {
+        max-width: 100%;
+        height: auto;
+        width: auto\9; /* Adiciona suporte ao IE9 */
+    }
+}
+
+@media (min-width: 606px) {
+    #bott-mobile {
+        display: none !important;
+    }
+}
+
+h2 {
+    margin: 15px;
+    font-size: 2rem;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #000000;
+    background-image: linear-gradient(to right, #ccc, #333333, #ccc);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lab {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    margin-bottom: 20px;
+}
+
+.custButton {
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #a3c4c2;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #080d0d;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+
+    &:hover {
+        background-color: #6e7777;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50px;
+    background-color: #b4a68e;
+    margin: 0;
+
+}
+
+.p-footer,
+.img-footer {
+    display: flex;
+    color: #080d0d;
+}
+
+.img-footer {
+    padding: 0px 5px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.p-footer {
+    margin-right: 20px;
+}
+
+form input,
+form textarea {
+    outline: unset;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #080d0d;
+    border-radius: 5px;
+    background-color: #f3f3e6;
+}
+
+.corpo {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-container {
+    display: inline-flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.div-imagens, .div-imagens-atb {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
+.div-imagens-atb > h3 {
+    font-size: 0.8rem;
+}
+
+.imagem-item {
+    max-width: 260px;
+}
+
+.imagem-item-atb {
+   width: 220px;
+   height: 320px;
+}
