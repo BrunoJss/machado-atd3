@@ -25,14 +25,15 @@ body {
 }
 
 .texto-principal {
+    padding: 0px;
     width: 50%;
 }
 
 .texto-principal>p {
     text-align: justify;
     margin: 0px;
-    padding: 10px;
-    text-indent: 4em;
+    padding: 3px;
+    text-indent: 3em;
 }
 
 header {
@@ -83,7 +84,9 @@ header {
     background-color: #a3c4c2;
 }
 
-
+.texto-principal, .corpo-news > .texto-news  {
+    padding: 10px;
+}
 
 .bott-mobile>nav>ul {
     display: flex;
@@ -195,15 +198,17 @@ a:link {
 }
 
 .promo-tex {
+    margin: 15px;
     font-size: 3rem;
 }
 
 .faixa-facilidades {
 background-color: #a3c4c2;
-height: 30px;
+height: 40px;
 display: flex;
 align-items: center;
 justify-content: space-around;
+margin-bottom: 15px;
 }
 
 .facilidade-itens {
@@ -236,8 +241,27 @@ justify-content: space-around;
 
     }
 
-    a {
+    .corpo-news {
+        flex-direction: column;
         width: 100%;
+    }
+
+    .corpo-news > .texto-news{
+        width: 100%;
+    }
+
+    .midia-news {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    video {
+        width: 350px;
+    }
+
+    a {
         font-size: 12px;
         text-align: center;
     }
@@ -259,7 +283,7 @@ justify-content: space-around;
         height: 100%;
         background-color: #a3c4c2;
         opacity: 0;
-        animation: slideRight 12s linear infinite;
+        animation: slideRight 5s linear infinite;
     }
 
     .facilidade-itens:nth-child(1) { animation-delay: 0s; }
@@ -302,10 +326,6 @@ justify-content: space-around;
         display: flex;
     }
 
-    .corpo-news {
-        flex-direction: column;
-    }
-
     .responseMenu img {
         display: flex;
     }
@@ -327,9 +347,12 @@ justify-content: space-around;
 
     }
 
-    .texto-principal {
+    .texto-principal, .corpo-news > .texto-news  {
+        padding: 10px;
         width: 100%;
     }
+
+
 
 
     .search-box-input {
@@ -357,6 +380,10 @@ justify-content: space-around;
         height: auto;
         width: auto\9;
         /* Adiciona suporte ao IE9 */
+    }
+
+    .banner-promo {
+        flex-direction: column;
     }
 }
 
@@ -418,10 +445,19 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    height: 50px;
     background-color: #b4a68e;
     margin: 0;
 
+}
+
+footer > p {
+    text-align: center;
+    margin: 10px;
+}
+footer > a {
+    margin: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 .p-footer,
@@ -431,15 +467,13 @@ footer {
 }
 
 .img-footer {
+    height: 30px;
+    width: auto;
     padding: 0px 5px;
 
     &:hover {
         cursor: pointer;
     }
-}
-
-.p-footer {
-    margin-right: 20px;
 }
 
 form input,
@@ -498,7 +532,7 @@ form textarea {
     justify-content: space-between;
 }
 
-.icone-contato>img {
+.icone-contato>a>img {
     max-width: 45px;
     max-height: 45px;
     width: auto;
@@ -519,15 +553,16 @@ form textarea {
 }
 
 .texto-news {
-    margin-left: 25px;
+    height:100%;
+    width: 50%;
     text-align: justify;
     text-indent: 0.5cm;
-    margin: 5px;
 }
 
 .midia-news {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 video {
@@ -537,3 +572,22 @@ video {
 
 /* É TESTE BOY*/
 
+.fundo-texto {
+    background-color: #217e8680;
+    border-radius: 10px;
+}
+
+.main-sobre {
+    align-items: center;
+    justify-content: center;
+}
+
+.atribuicoes-ul {
+    display: block;
+    margin: 20px;
+    padding-left: 15px;
+}
+
+h3 {
+    padding-left: 2rem;
+}
